@@ -40,7 +40,7 @@ jobs:
         with:
           appname: ${{ inputs.profile_name }}
           createprofile: false
-          # policy: ${{ inputs.policy_name }}
+          policy: ${{ inputs.policy_name }}
           version: '${{ github.run_id }}'
           filepath: ./veracode_artifact_directory/${{ env.veracode_artifact }}
           vid: '${{ secrets.VERACODE_API_ID }}'
