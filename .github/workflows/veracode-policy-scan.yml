@@ -39,14 +39,14 @@ jobs:
         id: upload_and_scan
         with:
           appname: ${{ inputs.profile_name }}
-          createprofile: true
-          policy: ${{ inputs.policy_name }}
+          createprofile: false
+          # policy: ${{ inputs.policy_name }}
           version: '${{ github.run_id }}'
           filepath: ./veracode_artifact_directory/${{ env.veracode_artifact }}
           vid: '${{ secrets.VERACODE_API_ID }}'
           vkey: '${{ secrets.VERACODE_API_KEY }}'
           #scanpollinginterval: 30
-          scantimeout: 15
+          scantimeout: 30
           include: ${{ inputs.modules_to_scan }}
           failbuild: true
         
