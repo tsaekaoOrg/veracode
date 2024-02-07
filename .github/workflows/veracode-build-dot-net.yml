@@ -35,14 +35,14 @@ jobs:
     - name: Create zip archive
       run: zip -r veracode.zip ./output
 
-    - name: Setup .NET
-      run: |
-        choco install dotnetcore-sdk -y
-        dotnet --version
-    - name: Build application
-      run: |
-        dotnet restore
-        dotnet publish -c Debug -o ./output
+#    - name: Setup .NET
+#      run: |
+#        choco install dotnetcore-sdk -y
+#        dotnet --version
+#    - name: Build application
+#      run: |
+#        dotnet restore
+#        dotnet publish -c Debug -o ./output
         
 #     - name: Setup 7zip
 #       run: |
